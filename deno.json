@@ -1,0 +1,18 @@
+{
+  "imports":
+  {
+    "obsidian": "npm:obsidian",
+    "esbuild": "https://deno.land/x/esbuild@v0.19.10/mod.js",
+    "builtin-modules": "npm:builtin-modules"
+  },
+  "tasks": {
+    "dev": "deno run --allow-env --allow-read --allow-run --watch esbuild.config.mjs",
+    "build": "deno check main.ts && deno run --allow-env --allow-read --allow-run esbuild.config.mjs production "
+  },
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+    ]
+  }
+}
